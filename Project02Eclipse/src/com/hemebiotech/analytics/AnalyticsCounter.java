@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.Map;
 
 
 
@@ -20,14 +21,15 @@ public class AnalyticsCounter {	// initialize to 0
 		/*
 		 * Creating the reader to open and read the symptom file and scanning each line
 		 */
-		BufferedReader reader = new BufferedReader (new FileReader("symptoms.txt"));
-		String line = reader.readLine();
-		while (line != null) {
-			
-			Symptom.addSymptom(line);
-			line = reader.readLine();	// get another symptom (or read another line)
-		}
-		Symptom.writeTotalSymptoms();
+
+		ReadSymptomDataFromFile newRead = new ReadSymptomDataFromFile("symptoms.txt");
+		WriteSymptomDataToFile newWrite = new WriteSymptomDataToFile("result.out");
+		
+		newWrite.writeSymptoms(newRead.GetSymptoms());
+		
+		
+		//WriteSymptomDataToFile newWrite = new WriteSymptomDataToFile("result.out");
+		//newWrite.writeSymptoms(newRead.GetSymptoms());;
 	}
 }
 
