@@ -15,7 +15,6 @@ import java.util.Map;
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
 	private String filepath;
-	
 	/**
 	 * 
 	 * @param filepath a full or partial path to file with symptom strings in it, one per line
@@ -23,15 +22,12 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	public ReadSymptomDataFromFile (String filepath) {
 		this.filepath = filepath;
 	}
-	
 	@Override
-	
 	/*
 	 * This method will create a new HashMap and put each new word in it. 
 	 * If the world is already in there, the value of this new word will be incremented by 1.
 	 */
-	
-	public Map<String, Integer> GetSymptoms() {
+	public Map<String, Integer> getSymptoms() {
 		Map<String, Integer> result = new HashMap<String, Integer>();
 		
 		if (filepath != null) {
