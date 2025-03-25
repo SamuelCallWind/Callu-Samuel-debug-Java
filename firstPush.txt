@@ -1,2 +1,0 @@
-This is just a sample document mentioning that I'm doing the first push for the project in the dev branch
-
