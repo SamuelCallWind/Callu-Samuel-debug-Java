@@ -7,10 +7,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 /**
- * Simple brute force implementation
- *
+ * This class will read the data from the file path mentioned 
+ * and create a HashMap with the value of each symptom
  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
@@ -28,7 +29,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	 * If the world is already in there, the value of this new word will be incremented by 1.
 	 */
 	public Map<String, Integer> getSymptoms() {
-		Map<String, Integer> result = new HashMap<String, Integer>();
+		Map<String, Integer> result = new TreeMap<String, Integer>();
 		
 		if (filepath != null) {
 			try {

@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 /**
- * This class Implements the ISyymptomWriter Interface and write the symptoms
+ * This class Implements the ISymptomWriter Interface and write the symptoms
  * in the filepath provided in the WriteSymptomDataToFile Method
  */
 public class WriteSymptomDataToFile implements ISymptomWriter {
@@ -36,7 +36,7 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 			for (Map.Entry<String, Integer> element : symptoms.entrySet()) {
 				fileWriter.write(element.getKey() + ": " + element.getValue() + "\n");
 			}
-			System.out.println("The symptoms have been written in the result.out file");
+			System.out.println("The symptoms have been written in the " + filePath +" file");
 			fileWriter.close();
 			
 		} catch (IOException e) {

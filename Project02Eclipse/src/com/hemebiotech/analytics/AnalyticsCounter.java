@@ -14,7 +14,7 @@ public class AnalyticsCounter {	// initialize to 0
 		 * Creating the reader to open and read the symptom file and scanning each line
 		 */
 		ReadSymptomDataFromFile newRead = new ReadSymptomDataFromFile("symptoms.txt");
-		WriteSymptomDataToFile newWrite = new WriteSymptomDataToFile("result.out");
+		WriteSymptomDataToFile newWrite = new WriteSymptomDataToFile("result.out.ordered");
 		
 		newWrite.writeSymptoms(newRead.getSymptoms());
 	}
