@@ -2,4 +2,4 @@
 
 ## Présentation du projet
 
-Implementation of a **AnalyticsCounter** that is reading symptoms from the symptom file. This class is reading each line of the document and writes them back in the result.out file
+Implementation of a **AnalyticsCounter** that is reading *symptoms* from the symptom file. This class is reading each line of the document and writes them back in the result.out file
